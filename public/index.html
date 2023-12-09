@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-ca" theme="cherries" themes="cherries dw dark night 256k" loading>
+	<meta charset="utf-8">
+	<title>tape recorder</title>
+	<meta
+		name="description"
+		content="4-track stereo tape recorder">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/stylesheet.css">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="tape recorder">
+	<meta name="apple-mobile-web-app-title" content="tape recorder">
+	<meta name="theme-color" content="#000">
+	<meta property="og:title" content="tape recorder">
+	<meta property="og:description" content="tape recorder">
+	<meta property="og:image" content="/aux/apple-touch-icon.png">
+	<meta name="twitter:card" content="summary">
+	<link rel="apple-touch-icon" href="/aux/apple-touch-icon.png">
+	<link rel="manifest" href="/aux/app.webmanifest">
+
+	<audio
+		class="iphone-silence"
+		src="/aux/iphone-silence.flac"
+		loop
+		autoplay
+		preload="auto">
+	</audio>
+
+	<tape-machine>
+		<tape-track track="0"></tape-track>
+		<tape-track track="1"></tape-track>
+		<tape-track track="2"></tape-track>
+		<tape-track track="3"></tape-track>
+
+		<tape-transport>
+			<button id="one">1</button>
+			<button id="two">2</button>
+			<button id="three">3</button>
+			<button id="four">4</button>
+
+			<button id="lift">↥</button>
+			<button id="drop">↧</button>
+			<button id="snip">✄</button>
+			<button></button>
+
+			<button id="arm">●</button>
+			<button id="play">▶</button>
+			<button id="stop">■</button>
+			<button></button>
+
+			<button id="left">←</button>
+			<button id="right">→</button>
+			<button id="shift">shift</button>
+			<button></button>
+		</tape-transport>
+	</tape-machine>
+
+	<script type="module" src="/main.js"></script>

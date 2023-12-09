@@ -1,0 +1,17 @@
+{
+	"name": "tapemode",
+	"start_url": ".",
+	"description": "tape recorder",
+	"display": "fullscreen",
+	"scope": "/",
+	"theme_color": "#000",
+	"background_color": "#000",
+	"icons": [
+		{
+			"src": "icons/tapemode.svg",
+			"type": "image/svg",
+			"purpose": "any",
+			"sizes": "any"
+		}
+	]
+}

@@ -1,0 +1,300 @@
+:root {
+	/*=START-OF-PUBLIC-API*/
+	--fill: white;
+	--line: black;
+	--font-family: monospace;
+	/* =page= */
+	--page-fill: var(--fill);
+	--page-line: var(--line);
+	--scrollbar-bg: var(--fill);
+	--scrollbar-fg: var(--line);
+	--focus-outline: var(--page-line);
+	--drop-target-outline: var(--focus-outline);
+
+	/* =machine= */
+	--machine-fill: var(--page-fill);
+	--machine-line: var(--page-line);
+	--machine-border-width: 1px;
+	--machine-shadow-color: var(--page-fill);
+	--prominent-fill: var(--machine-line);
+	--prominent-line: var(--machine-fill);
+
+	/* =controls= */
+	--button-border-radius: 0;
+	--control-fill: var(--machine-fill);
+	--control-line: var(--machine-line);
+
+	/* =screen= */
+	--screen-fill: var(--prominent-fill);
+	--screen-line: var(--prominent-line);
+	--region-fill: var(--machine-fill);
+	--region-line: var(--machine-line);
+	--drawing-region-fill: var(--region-fill);
+	--drawing-region-line: var(--region-line);
+	--screen-selector-fill: var(--screen-fill);
+	--screen-selector-line: var(--screen-line);
+	--screen-selector-button-fill: var(--screen-fill);
+	--screen-selector-button-line: var(--screen-line);
+	--screen-selector-button-shadow-color: var(--machine-shadow-color);
+	--selected-screen-selector-button-fill: var(--screen-line);
+	--selected-screen-selector-button-line: var(--screen-fill);
+
+	/* *END-OF-PUBLIC-API* */
+	background: var(--page-fill);
+}
+
+body {
+	background: var(--page-fill);
+}
+
+/* =EXAMPLE-THEMES* */
+
+[theme="cherries"] {
+	--cherries-light: #ffe9ed;
+	--cherries-dark: #cc3366;
+	--holy-light: white;
+	--holy-dark: black;
+	--cherries-yellow: #ffd807;
+	--2013-body-grey: #333;
+	--orla-foster-2003-bermuda-cocktail-number-3: #3399ff;
+
+	--settings-fill: var(--orla-foster-2003-bermuda-cocktail-number-3);
+	--settings-line: var(--holy-light);
+
+	--font-family: qp, iosevka, monaco, monospace;
+	--line: var(--cherries-dark);
+	--fill: color-mix(
+		in srgb,
+		var(--cherries-light) 80%,
+		var(--holy-light)
+	);
+
+	--machine-shadow-color: color-mix(
+		in srgb,
+		var(--cherries-light) 90%,
+		var(--holy-dark)
+	);
+	--screen-selector-button-shadow-color: color-mix(
+		in srgb,
+		var(--cherries-dark) 88%,
+		var(--holy-dark)
+	);
+	--settings-button-shadow-color: color-mix(
+		in srgb,
+		var(--settings-fill) 75%,
+		var(--holy-dark)
+	);
+	--machine-fill: var(--cherries-light);
+	--region-fill: var(--cherries-yellow);
+	--region-line: var(--2013-body-grey);
+	--drawing-region-fill: #00ff99ee;
+	--focus-outline: var(--orla-foster-2003-bermuda-cocktail-number-3);
+	--selected-box-outline: black;
+	--drop-target-outline: #00ffcc;
+	--button-border-radius: 4px;
+	--layer-selector-border-radius: 2px;
+	/* --grid-fill: var(--holy-light); */
+	--box-off-fill: var(--cherries-light);
+	--box-shadow-color: color-mix(
+		in srgb,
+		var(--cherries-dark) 12%,
+		var(--holy-light)
+	);
+}
+
+[theme="night"] {
+	--font-family: menlo;
+	--fill: black;
+	--line: #66c;
+	--page-fill: #000;
+	--machine-shadow-color: black;
+	--machine-fill: black;
+	--prominent-line: #aaf;
+	--prominent-fill: #000;
+	--screen-fill: black;
+	--screen-line: #f4a;
+	--box-on-fill: #113;
+	--region-fill: #339;
+	--region-line: #f4a;
+}
+
+[theme="dw"] {
+	--font-family: courier;
+	--dark: black;
+	--holy: white;
+	--grey: #595959;
+	--m8: #00efff;
+	--pan-left-mix: #903;
+	--pan-right-mix: #039;
+	--fill: var(--dark);
+	--line: var(--grey);
+	--machine-shadow-color: var(--fill);
+	--prominent-line: var(--holy);
+	--prominent-fill: var(--fill);
+	--screen-fill: var(--fill);
+	--screen-line: var(--m8);
+	--box-on-fill: var(--fill);
+	--box-on-line: var(--m8);
+	--selected-box-outline: var(--m8);
+	--region-fill: var(--m8);
+	--region-line: var(--fill);
+	--layer-options-fill: var(--fill);
+}
+
+[theme="dark"] {
+	--line: #666;
+	--fill: black;
+}
+
+[theme="256k"] {
+	--font-family: "DejaVu Sans Mono", Menlo, monospace;
+	--fill: white;
+	--line: black;
+	--prominent-fill: white;
+	--prominent-line: black;
+	--screen-fill: white;
+	--screen-line: black;
+	--pan-left-mix: #f99;
+	--pan-right-mix: #99f;
+	--selected-layer-selector-fill: black;
+	--selected-layer-selector-line: white;
+	--layer-options-fill: white;
+	--layer-options-line: black;
+	--settings-button-fill: white;
+	--settings-button-line: black;
+	--region-fill: black;
+	--region-line: white;
+}
+
+[theme="mexpan"] {
+	--fill: #daf7a6;
+	--line: #ff5733;
+	--pan-left-mix: #006341;
+	--pan-right-mix: #c8102e;
+}
+
+[theme="plan9"] {
+	--font-family: fs, monospace;
+	--fill: #737573;
+	--line: black;
+	--machine-fill: #fdffec;
+	--machine-line: #64afb1;
+	--machine-shadow-color: transparent;
+	--machine-border-width: 4px;
+	--region-fill: #99994b;
+	--drawing-region-fill: #f0eea9;
+	--region-line: black;
+	--prominent-fill: #ffffec;
+	--prominent-line: #000;
+	--control-line: #000;
+	--pan-right-mix: #02019a;
+	--box-off-line: #aeefec;
+	--box-off-fill: #ffffec;
+	--box-on-fill: white;
+	--box-on-line: #64afb1;
+	--box-wav-line: #000;
+	--quiet-mix: #fdffec;
+	--master-controls-shadow-color: transparent;
+	--box-shadow-color: transparent;
+}
+
+/* ====*==== */
+
+@font-face {
+	font-family: qp;
+	src: url("/aux/fonts/iosevka-qp-regular.ttf") format("truetype");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: qp;
+	src: url("/aux/fonts/iosevka-qp-light.ttf") format("truetype");
+	font-display: swap;
+	font-weight: 200;
+}
+
+svg[data-icon] {
+	display: none;
+}
+
+* {
+	/* disable bouncing */
+	overscroll-behavior: none;
+	scrollbar-color: var(--scrollbar-bg) var(--scrollbar-fg);
+	/* disable tappy zoom */
+	touch-action: manipulation;
+
+	/* completely disable highlighting stuff everywhere */
+	--webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	touch-action: manipulation;
+}
+
+::selection {
+	background: transparent;
+}
+
+
+html {
+	font-size: 2em;
+	line-height: 1.15;
+	background: var(--page-fill);
+}
+
+body {
+	/* remove margin from mosaic or whatever */
+	margin: 0;
+	background: var(--page-fill);
+	font-family: var(--font-family);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	touch-action: manipulation;
+}
+
+tape-machine {
+	background: var(--machine-fill);
+	color: var(--machine-line);
+	border: var(--machine-border-width) solid currentColor;
+	margin: 0;
+	width: 16em;
+	position: relative;
+	box-shadow: 0px 0px 40px 0px var(--machine-shadow-color);
+}
+
+tape-transport {
+	display: grid;
+	grid-template-columns: repeat(4, 1em);
+	grid-gap: 0;
+	font-size: 4em;
+}
+
+tape-transport button {
+	appearance: none;
+	background: var(--control-fill);
+	color: var(--control-line);
+	border: 1px solid currentColor;
+	cursor: pointer;
+	font-size: 0.5em;
+	width: 2em;
+	height: 2em;
+	font-family: var(--font-family);
+}
+
+tape-track {
+	height: 2em;
+	display: block;
+}
+
+tape-track canvas {
+	height: 2em;
+	width: 100%;
+}
